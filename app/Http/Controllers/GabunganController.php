@@ -16,7 +16,7 @@ class GabunganController extends Controller
     public function index()
     {
         $siswa = DB::table('siswa')
-            ->where('id_kelas', '=', '03')
+            ->where('kelas', '=', 'XII')
             ->join('kelas','siswa.id_kelas','=','kelas.id_kelas')
             ->select('*')
             ->get();
